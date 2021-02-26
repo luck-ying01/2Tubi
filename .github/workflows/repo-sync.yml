@@ -20,5 +20,3 @@ jobs:
         static_list: "Tubi"  
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }} 
-        force_update: true
-        account_type: user

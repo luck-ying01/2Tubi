@@ -16,8 +16,8 @@ jobs:
       uses: Yikun/hub-mirror-action@master
       with:
         src: github/luck-ying01
-        dst: gitee/luck-ying
-        static_list: "V2EX_sign"  
+        dst: gitee/luck-ying01
+        static_list: "2Tubi"  
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token: ${{ secrets.GITEE_TOKEN }} 
         force_update: true

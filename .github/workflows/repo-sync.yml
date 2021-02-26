@@ -1,13 +1,13 @@
-name: 同步到gitee
+name: 同步Action_jd_scripts到gitee
 on:
   # 如果需要 PR 触发把 push 前的#去掉
   # push:
   # 手动事件，如果需要手动触发把 workflow_dispatch 前的#去掉
   workflow_dispatch:
   # 计划事件
-  #schedule:
+  schedule:
     # 每天北京时间9点运行
-  #  - cron:  '0 1 * * *'
+    - cron:  '0 1 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest

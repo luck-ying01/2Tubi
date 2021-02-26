@@ -1,0 +1,24 @@
+name: 同步到gitee
+on:
+  # 如果需要 PR 触发把 push 前的#去掉
+  # push:
+  # 手动事件，如果需要手动触发把 workflow_dispatch 前的#去掉
+  workflow_dispatch:
+  # 计划事件
+  #schedule:
+    # 每天北京时间9点运行
+  #  - cron:  '0 1 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: sync github -> gitee
+      uses: Yikun/hub-mirror-action@master
+      with:
+        src: github/luck-ying01
+        dst: gitee/luck-ying
+        static_list: "V2EX_sign"  
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token: ${{ secrets.GITEE_TOKEN }} 
+        force_update: true
+        account_type: user

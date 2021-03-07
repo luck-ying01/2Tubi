@@ -35,6 +35,6 @@ jobs:
         with:
           src: github/luck-ying01
           dst: gitee/luck-ying01
-          static_list: "Action_jd_scripts"
+          static_list: "MyActions"
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }}
